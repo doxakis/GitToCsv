@@ -38,6 +38,6 @@ then
 		cd "$line/.."
 		projectName=$(basename $(git rev-parse --show-toplevel))
 		git log --date=iso --pretty=format:"\"$projectName\",\"%H\",\"%an\",\"%ad\",\"%s\"," >> $outputcsv
-		echo. >> $outputcsv
+		echo "" >> $outputcsv
 	done
 fi
